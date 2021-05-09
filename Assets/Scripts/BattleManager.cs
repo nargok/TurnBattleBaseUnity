@@ -11,11 +11,18 @@ public class BattleManager : MonoBehaviour
     
     void Start()
     {
-        player.Attack(enemy);
-        enemy.Attack(player);
     }
     
     // playerがEnemyを攻撃する
+    public void OnAttachButton()
+    {
+        player.Attack(enemy);
+        EnemyTurn();
+    }
     // EnemyがPlayerを攻撃する
+    void EnemyTurn()
+    {
+        enemy.Attack(player);
+    }
 
 }
